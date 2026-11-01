@@ -9,7 +9,6 @@ offscreen-режиме через QWidget.grab() - на экране не поя
 
 from __future__ import annotations
 
-import os
 from pathlib import Path
 
 OUT = Path("screenshots")
