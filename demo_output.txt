@@ -1,0 +1,74 @@
+Лабораторная работа №5, вариант 4 - протокол проверки
+======================================================================
+
+Дата выполнения: 02.11.2026
+Python: 3.11.1, Tkinter 8.6, PyQt5 (Qt 5.15.2)
+ОС: Windows 10
+
+GUI-программы интерактивны, поэтому вместо текстового вывода
+каждое окно снято на скриншот (каталог screenshots/, скрипт
+make_screenshots.py). Ниже - фактический вывод модульных
+тестов (включая GUI smoke-тесты), проверки стиля и съёмки.
+
+----------------------------------------------------------------------
+Модульные тесты: модели + GUI smoke (Tkinter и PyQt5)
+----------------------------------------------------------------------
+$ py -3 -m unittest -v
+
+test_empty_name (test_tasks.TestGreeting.test_empty_name) ... ok
+test_greeting (test_tasks.TestGreeting.test_greeting) ... ok
+test_add_and_get (test_tasks.TestItemListModel.test_add_and_get) ... ok
+test_empty_and_duplicate_rejected (test_tasks.TestItemListModel.test_empty_and_duplicate_rejected) ... ok
+test_remove (test_tasks.TestItemListModel.test_remove) ... ok
+test_invalid_maximum (test_tasks.TestProgressModel.test_invalid_maximum) ... ok
+test_pause_keeps_value (test_tasks.TestProgressModel.test_pause_keeps_value) ... ok
+test_reset (test_tasks.TestProgressModel.test_reset) ... ok
+test_restart_after_completion (test_tasks.TestProgressModel.test_restart_after_completion) ... ok
+test_ticks_to_completion (test_tasks.TestProgressModel.test_ticks_to_completion) ... ok
+test_greeter_window (test_tasks.TestPyQtGui.test_greeter_window) ... ok
+test_table_window (test_tasks.TestPyQtGui.test_table_window) ... ok
+test_double_start_is_noop (test_tasks.TestStopwatchModel.test_double_start_is_noop) ... ok
+test_format_elapsed (test_tasks.TestStopwatchModel.test_format_elapsed) ... ok
+test_laps_and_reset (test_tasks.TestStopwatchModel.test_laps_and_reset) ... ok
+test_resume_accumulates (test_tasks.TestStopwatchModel.test_resume_accumulates) ... ok
+test_start_elapsed_pause (test_tasks.TestStopwatchModel.test_start_elapsed_pause) ... ok
+test_add_validates (test_tasks.TestStudentTableModel.test_add_validates) ... ok
+test_average (test_tasks.TestStudentTableModel.test_average) ... ok
+test_remove (test_tasks.TestStudentTableModel.test_remove) ... ok
+test_sorting (test_tasks.TestStudentTableModel.test_sorting) ... ok
+test_listbox_app (test_tasks.TestTkinterGui.test_listbox_app) ... ok
+test_progressbar_app (test_tasks.TestTkinterGui.test_progressbar_app) ... ok
+test_stopwatch_app (test_tasks.TestTkinterGui.test_stopwatch_app) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.265s
+
+OK
+
+код возврата: 0
+
+----------------------------------------------------------------------
+Проверка стиля кода (flake8)
+----------------------------------------------------------------------
+$ py -3 -m flake8 . --statistics
+
+.\make_screenshots.py:12:1: F401 'os' imported but unused
+1     F401 'os' imported but unused
+
+код возврата: 1
+
+----------------------------------------------------------------------
+Съёмка скриншотов всех пяти окон
+----------------------------------------------------------------------
+$ py -3 make_screenshots.py
+
+Tkinter-окна (кратковременно появятся на экране):
+  task04_listbox.png: 420x300
+  task05_stopwatch.png: 360x300
+  task06_progressbar.png: 380x150
+PyQt5-окна (тоже кратковременно появятся на экране):
+  task10_pyqt_hello.png: 420x220
+  task09_pyqt_table.png: 560x420
+Готово: 5 скриншотов в screenshots
+
+код возврата: 0
