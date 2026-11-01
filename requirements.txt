@@ -1,0 +1,6 @@
+# Зависимости приложений (задания 10 и 9)
+PyQt5>=5.15,<5.16
+
+# Только для make_screenshots.py (съёмка скриншотов окон)
+Pillow>=10.0
+pywin32>=306; platform_system == "Windows"
