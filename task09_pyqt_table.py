@@ -94,12 +94,11 @@ class StudentTableWindow(QMainWindow):
         super().__init__()
         self.setWindowTitle("Задание 9 - Таблица студентов")
         self.setMinimumSize(560, 420)
-        self.model = StudentTableModel()
-        for row in [StudentRow("Полошков Ярослав Витальевич",
-                               "220042-11", 5),
-                    StudentRow("Иванов Иван Иванович", "220042-11", 4),
-                    StudentRow("Петрова Анна Сергеевна", "221341", 5)]:
-            self.model.rows.append(row)
+        self.model = StudentTableModel([
+            StudentRow("Полошков Ярослав Витальевич", "220042-11", 5),
+            StudentRow("Иванов Иван Иванович", "220042-11", 4),
+            StudentRow("Петрова Анна Сергеевна", "221341", 5),
+        ])
 
         central = QWidget(self)
         self.setCentralWidget(central)

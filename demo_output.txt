@@ -41,7 +41,7 @@ test_progressbar_app (test_tasks.TestTkinterGui.test_progressbar_app) ... ok
 test_stopwatch_app (test_tasks.TestTkinterGui.test_stopwatch_app) ... ok
 
 ----------------------------------------------------------------------
-Ran 24 tests in 0.265s
+Ran 24 tests in 0.261s
 
 OK
 
@@ -52,10 +52,8 @@ OK
 ----------------------------------------------------------------------
 $ py -3 -m flake8 . --statistics
 
-.\make_screenshots.py:12:1: F401 'os' imported but unused
-1     F401 'os' imported but unused
 
-код возврата: 1
+код возврата: 0
 
 ----------------------------------------------------------------------
 Съёмка скриншотов всех пяти окон
